@@ -50,3 +50,27 @@ button {
   border: none;
   cursor: pointer;
 }
+/* src/index.css */
+
+html, body, #root, .app-container {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
