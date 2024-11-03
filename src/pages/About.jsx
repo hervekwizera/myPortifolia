@@ -43,7 +43,7 @@ function About() {
           transition={{ duration: 1.4, ease: "easeOut" }}
         >
           <FaHandsHelping className="icon" />
-          <h2>****Why Choose Us*****?</h2>
+          <h2>**Why Choose Us?**</h2>
           <ul>
             <li><strong>User-Centric Design</strong>: Beautiful and functional projects</li>
             <li><strong>Quality Commitment</strong>: Every detail matters</li>
