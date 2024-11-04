@@ -1,0 +1,118 @@
+/* src/pages/Project.css */
+
+/* Import a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.project-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #ffffff, #f0f8ff);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.project-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project-card {
+  flex: 0 1 250px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #ffffff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card h2 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Adding hover effect */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: background 0.4s ease;
+}
+
+.project-card:hover::before {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hover color transition */
+.project-card:nth-child(1):hover {
+  background-color: #ff7675;
+}
+
+.project-card:nth-child(2):hover {
+  background-color: #ffb142;
+}
+
+.project-card:nth-child(3):hover {
+  background-color: #ff6b81;
+}
+
+.project-card:nth-child(4):hover {
+  background-color: #2ed573;
+}
+
+.project-card:nth-child(5):hover {
+  background-color: #3742fa;
+}
+
+/* Animation for a subtle shine effect */
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 50%;
+  transform: scale(0.7);
+}
+
+.project-card:hover::after {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
