@@ -1,26 +1,38 @@
-// src/pages/Projects.js
+// src/pages/Project.js
 import React from "react";
+import { motion } from "framer-motion";
+import "./Project.css";
 
-function Projects() {
+function Project() {
   const projects = [
-    { id: 1, name: "Project One", description: "Description of Project One" },
-    { id: 2, name: "Project Two", description: "Description of Project Two" },
-    { id: 3, name: "Project Three", description: "Description of Project Three" },
+    { title: "Project One", description: "An innovative web application", color: "#ff6363" },
+    { title: "Project Two", description: "A responsive design challenge", color: "#ffa600" },
+    { title: "Project Three", description: "A dynamic e-commerce site", color: "#bc5090" },
+    { title: "Project Four", description: "An interactive dashboard", color: "#58508d" },
+    { title: "Project Five", description: "A social media platform", color: "#003f5c" },
   ];
 
   return (
-    <div className="projects">
-      <h1>My Projects</h1>
-      <div className="project-list">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
-            <h2>{project.name}</h2>
+    <div className="project-page">
+      <h1 className="project-title">My Projects</h1>
+      <div className="project-cards">
+        {projects.map((project, index) => (
+          <motion.div
+            className="project-card"
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 + index * 0.2, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }}
+            style={{ backgroundColor: project.color }}
+          >
+            <h2>{project.title}</h2>
             <p>{project.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
   );
 }
 
-export default Projects;
+export default Project;
